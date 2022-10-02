@@ -12,7 +12,7 @@ async function getAndSetData() {
       <tr id="${index}">
         <td>${cand.nm}</td>
         <td>${cand.cc.slice(0, 20)}...</td>
-        <td>${cand.vap}</td>
+        <td>${new Intl.NumberFormat().format(cand.vap)}</td>
         <td>${cand.pvap}%</td>
       </tr
     `;
