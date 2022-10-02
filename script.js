@@ -17,8 +17,16 @@ async function getAndSetData() {
       </tr
     `;
   });
-  $table.innerHTML = result;
+  $table.innerHTML = `
+    <tr>
+      <th>Candidato</th>
+      <th>Partido</th>
+      <th>Nº de Votos</th>
+      <th>Porcentagem</th>
+    </tr>
+  `;
+  $table.innerHTML += result;
 }
 
-getAndSetData()
+getAndSetData();
 setInterval(getAndSetData, 10000);
